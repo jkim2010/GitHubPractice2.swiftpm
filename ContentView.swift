@@ -20,6 +20,10 @@ struct ContentView: View {
         
         Button {
             addNumbers(number1: number1 ?? 0, number2: number2 ?? 0)
+            
+            number1 = nil
+            number2 = nil
+            
         } label: {
             RoundedRectangle(cornerRadius: 25.5)
                 .frame(width: 150, height: 75)
