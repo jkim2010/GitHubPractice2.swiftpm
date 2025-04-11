@@ -6,7 +6,7 @@ struct ContentView: View {
     @State var answer: Int = 0
     var body: some View {
         
-       Text("Hello")
+        Text("Hello")
         
         TextField("Enter Number 1", value: $number1, format: .number)
             .padding()
