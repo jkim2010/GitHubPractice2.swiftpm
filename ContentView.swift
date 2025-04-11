@@ -13,6 +13,9 @@ struct ContentView: View {
             .multilineTextAlignment(.center)
             .textFieldStyle(.roundedBorder)
         
+        Text("+")
+            .font(.title)
+        
         TextField("Enter Number 2", value: $number2, format: .number)
             .padding()
             .multilineTextAlignment(.center)
