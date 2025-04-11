@@ -7,12 +7,13 @@ struct ContentView: View {
     var body: some View {
         
        Text("Hello")
-        TextField("Number 2", value: $number2, format: .number)
+        
+        TextField("Enter Number 1", value: $number1, format: .number)
             .padding()
             .multilineTextAlignment(.center)
             .textFieldStyle(.roundedBorder)
         
-        TextField("Enter Number 1", value: $number1, format: .number)
+        TextField("Enter Number 2", value: $number2, format: .number)
             .padding()
             .multilineTextAlignment(.center)
             .textFieldStyle(.roundedBorder)
