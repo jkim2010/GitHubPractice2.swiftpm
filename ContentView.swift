@@ -38,6 +38,8 @@ struct ContentView: View {
         }
         
         Text(String(answer))
+            .padding()
+            .font(.title)
         
     }
     
