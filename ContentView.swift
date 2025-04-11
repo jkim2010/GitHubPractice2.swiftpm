@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var number1: Int = 0
-    @State var number2: Int = 0
+    @State var number1: Int?
+    @State var number2: Int?
     @State var answer: Int = 0
     var body: some View {
         
@@ -13,9 +13,12 @@ struct ContentView: View {
             .textFieldStyle(.roundedBorder)
         
         TextField("Enter Number 1", value: $number1, format: .number)
+            .padding()
+            .multilineTextAlignment(.center)
+            .textFieldStyle(.roundedBorder)
         
         Button {
-            addNumbers(number1: number1, number2: number2)
+            addNumbers(number1: number1 ?? 0, number2: number2 ?? 0)
         } label: {
             RoundedRectangle(cornerRadius: 25.5)
                 .frame(width: 150, height: 75)
