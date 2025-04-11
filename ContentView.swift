@@ -12,8 +12,10 @@ struct ContentView: View {
             .multilineTextAlignment(.center)
             .textFieldStyle(.roundedBorder)
         
+        TextField("Enter Number 1", value: $number1, format: .number)
+        
         Button {
-            
+            addNumbers(number1: number1, number2: number2)
         } label: {
             RoundedRectangle(cornerRadius: 25.5)
                 .frame(width: 150, height: 75)
@@ -23,11 +25,13 @@ struct ContentView: View {
                 }
                 .shadow(radius: 7)
         }
-
-        
-        TextField("Enter Number 1", value: $number1, format: .number)
         
         Text(String(answer))
         
+    }
+    
+    func addNumbers(number1: Int, number2: Int) -> Int {
+        answer = number1 + number2
+        return answer
     }
 }
